@@ -62,6 +62,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -80,6 +81,9 @@
             @endif
 
             <div class="content">
+                @auth
+                    <div>Welcome to</div>
+                @endauth
                 <div class="title m-b-md test">
                     Instagram
                 </div>
