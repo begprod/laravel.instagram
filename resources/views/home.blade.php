@@ -21,12 +21,10 @@
                     <strong>212</strong> following
                 </div>
             </div>
-            <div class="pt-4 font-weight-bold">instagram.com</div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam consequatur consequuntur dignissimos est exercitationem facere hic illum iste itaque minus molestiae nam perferendis, porro quam quidem quos veniam veritatis?</p>
-            </div>
-            <div>
-                <a href="#">instagram.com</a>
+                <a href="#">{{ $user->profile->url ?? 'n/a' }}</a>
             </div>
         </div>
     </div>
