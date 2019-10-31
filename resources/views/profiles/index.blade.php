@@ -7,8 +7,9 @@
             <img class="rounded-circle p-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9rKSOA4QiGr08dU7wrblrkr-w70UWT9mar_pwgMQrcb0rdAhD&s" alt="">
         </div>
         <div class="col-9 pt-5">
-            <div>
+            <div class="d-flex justify-content-between align-items-center">
                 <h1 class="font-weight-bold">{{ $user->username }}</h1>
+                <a href="#">Add new post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-5">
