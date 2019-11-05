@@ -11,6 +11,7 @@
                 <h1 class="font-weight-bold">{{ $user->username }}</h1>
                 <a href="/p/create">Add new post</a>
             </div>
+            <a href="/profile/{{ $user->id }}/edit">Edit profile</a>
             <div class="d-flex">
                 <div class="pr-5">
                     <strong>

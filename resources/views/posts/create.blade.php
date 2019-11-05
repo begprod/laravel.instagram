@@ -44,6 +44,7 @@
                                         type="file"
                                         class="form-control-file @error('image') is-invalid @enderror"
                                         name="image">
+
                                     @error('image')
                                         <strong>{{ $message }}</strong>
                                     @enderror
