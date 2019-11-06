@@ -4,14 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-3">
-            <img class="rounded-circle p-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9rKSOA4QiGr08dU7wrblrkr-w70UWT9mar_pwgMQrcb0rdAhD&s" alt="">
+            <img class="rounded-circle p-5" src="/storage/{{ $user->profile->image }}" alt="{{ $user->username }}">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-center">
                 <h1 class="font-weight-bold">{{ $user->username }}</h1>
-                <a href="/p/create">Add new post</a>
+                @can('update', $user->profile)
+                    <a href="/p/create">Add new post</a>
+                @endcan
             </div>
-            <a href="/profile/{{ $user->id }}/edit">Edit profile</a>
+
+            @can('update', $user->profile)
+                <a href="/profile/{{ $user->id }}/edit">Edit profile</a>
+            @endcan
+
             <div class="d-flex">
                 <div class="pr-5">
                     <strong>
