@@ -13,10 +13,11 @@
                             <img class="rounded-circle" src="/storage/{{ $post->user->profile->image }}" alt="{{ $post->user->profile->description }}">
                         </a>
                     </div>
-                    <div class="col-9">
-                        <h5 class="font-weight-bold">
+                    <div class="col-9 d-flex">
+                        <div class="font-weight-bold">
                             <a class="text-dark" href="/profile/{{ $post->user->id }}">{{ $post->user->username }}</a>
-                        </h5>
+                        </div>
+                        <a class="pl-3" href="">Follow</a>
                     </div>
                 </div>
 

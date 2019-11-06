@@ -12,4 +12,17 @@ class Profile extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function profileImage()
+    {
+        $profileImagePath = '';
+
+        if($this->image) {
+            $profileImagePath = '/storage/' . $this->image;
+        } else {
+            $profileImagePath = '/images/defaults/user.png';
+        }
+
+        return $profileImagePath;
+    }
 }
