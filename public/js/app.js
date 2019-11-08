@@ -1845,9 +1845,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['userId'],
   methods: {
     followUser: function followUser() {
-      console.log('work');
+      axios.post('/follow/' + this.userId).then(function (response) {
+        console.log(response);
+      });
     }
   }
 });

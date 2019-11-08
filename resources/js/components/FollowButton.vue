@@ -6,9 +6,14 @@
 
 <script>
     export default {
+    	props: ['userId'],
+
     	methods: {
     		followUser() {
-    			console.log('work');
+    			axios.post('/follow/' + this.userId)
+                    .then(response => {
+                    	console.log(response);
+                    });
             }
         }
     }
