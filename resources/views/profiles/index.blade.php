@@ -28,10 +28,10 @@
                     </strong> posts
                 </div>
                 <div class="pr-5">
-                    <strong>23k</strong> followers
+                    <strong>{{ $user->profile->followers->count() }}</strong> followers
                 </div>
                 <div class="pr-5">
-                    <strong>212</strong> following
+                    <strong>{{ $user->following->count() }}</strong> following
                 </div>
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title ?? 'n/a' }}</div>
